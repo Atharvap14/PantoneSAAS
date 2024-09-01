@@ -66,6 +66,7 @@ try:
         input_rgb = tuple(map(int, re.findall(r'\d+', color_input)))
     
     st.write(f'Input color RGB: {input_rgb}')
+    st.color_picker(label="Your Input Color", value=f'#{input_rgb[0]:02x}{input_rgb[1]:02x}{input_rgb[2]:02x}', disabled=True)
     
     # Find closest colors
     closest_colors = find_closest_colors(input_rgb, color_dict, k)
